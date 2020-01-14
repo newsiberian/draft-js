@@ -11,8 +11,6 @@
 
 'use strict';
 
-jest.disableAutomock();
-
 import type DraftEditor from 'DraftEditor.react';
 
 const CompositeDraftDecorator = require('CompositeDraftDecorator');
@@ -55,7 +53,7 @@ const getEditorState = (text: string = 'Arsenal') => {
 
 const getDraftEditor = (obj): DraftEditor => (obj: any);
 
-const getInputEvent = (data): SyntheticInputEvent<> =>
+const getInputEvent = (data): SyntheticInputEvent<HTMLElement> =>
   ({
     data,
     preventDefault: jest.fn(),

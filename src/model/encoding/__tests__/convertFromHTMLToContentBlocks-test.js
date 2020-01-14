@@ -11,7 +11,6 @@
 
 'use strict';
 
-jest.disableAutomock();
 expect.addSnapshotSerializer(require('NonASCIIStringSnapshotSerializer'));
 
 jest.mock('generateRandomKey');
@@ -437,6 +436,20 @@ test('Should scope attribute styles', () => {
   });
 });
 
+test('Should properly handle nested attribute styles', () => {
+  const html_string = [
+    '<span style="font-weight: bold">',
+    '<span>bold</span>',
+    '<span style="font-weight: normal">not bold</span>',
+    '<span>bold again</span>',
+    '</span>',
+  ].join('');
+
+  assertConvertFromHTMLToContentBlocks(html_string, {
+    experimentalTreeDataSupport: false,
+  });
+});
+
 test('Should recognized list deep nesting', () => {
   const html_string = `
     <ul>
@@ -526,6 +539,24 @@ test('Should import line breaks without creating a leading space', () => {
     Line 1<br/>
     Line 2<br/>
     Line 3
+  `;
+  assertConvertFromHTMLToContentBlocks(html_string, {
+    experimentalTreeDataSupport: false,
+  });
+});
+
+test('Should import two blockquotes without extra line breaks', () => {
+  const html_string = `
+    <blockquote>
+      <div>
+        <span>First</span>
+      </div>
+    </blockquote
+    <blockquote>
+      <div>
+        <span>Second</span>
+      </div>
+    </blockquote>
   `;
   assertConvertFromHTMLToContentBlocks(html_string, {
     experimentalTreeDataSupport: false,
