@@ -1,5 +1,5 @@
 {
-  "name": "draft-js",
+  "name": "@granatum/draft-js",
   "description": "A React framework for building text editors.",
   "version": "0.11.4",
   "keywords": [
@@ -15,6 +15,9 @@
     "lib/",
     "LICENSE"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "lib/Draft.js",
   "style": "dist/Draft.css",
   "repository": "facebook/draft-js",
