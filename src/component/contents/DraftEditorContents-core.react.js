@@ -36,7 +36,9 @@ type Props = {
   customStyleMap?: Object,
   editorKey?: string,
   editorState: EditorState,
+  preventScroll?: boolean,
   textDirectionality?: BidiDirection,
+  ...
 };
 
 /**
@@ -132,6 +134,7 @@ class DraftEditorContents extends React.Component<Props> {
       customStyleFn,
       editorState,
       editorKey,
+      preventScroll,
       textDirectionality,
     } = this.props;
 
@@ -175,6 +178,7 @@ class DraftEditorContents extends React.Component<Props> {
         direction,
         forceSelection,
         offsetKey,
+        preventScroll,
         selection,
         tree: editorState.getBlockTree(key),
       };

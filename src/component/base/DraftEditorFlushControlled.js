@@ -9,14 +9,9 @@
  * @emails oncall+draft_js
  */
 
-'use strict';
+const ReactDOMComet = require('ReactDOMComet');
 
-/**
- * A plain object representation of an inline style range.
- */
-export type InlineStyleRange = {
-  style: string,
-  offset: number,
-  length: number,
-  ...
-};
+const flushControlled: void | ((fn: () => void) => void) =
+  ReactDOMComet.unstable_flushControlled;
+
+module.exports = flushControlled;
