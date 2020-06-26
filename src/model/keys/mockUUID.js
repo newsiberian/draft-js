@@ -5,14 +5,16 @@
  * LICENSE file in the root directory of this source tree.
  *
  * @format
- * @flow strict
  * @emails oncall+draft_js
+ * @flow strict-local
  */
 
 'use strict';
 
-export type DraftOffsetKeyPath = {|
-  blockKey: string,
-  decoratorKey: number,
-  leafKey: number,
-|};
+let counter = 0;
+
+function mockUUID(): string {
+  return '' + ++counter;
+}
+
+module.exports = mockUUID;

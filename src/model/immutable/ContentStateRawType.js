@@ -5,14 +5,18 @@
  * LICENSE file in the root directory of this source tree.
  *
  * @format
- * @flow strict
+ * @flow
  * @emails oncall+draft_js
  */
 
 'use strict';
 
-export type DraftOffsetKeyPath = {|
-  blockKey: string,
-  decoratorKey: number,
-  leafKey: number,
-|};
+import type {BlockNodeRawConfig} from 'BlockNode';
+
+export type ContentStateRawType = {
+  entityMap: ?{...},
+  blockMap: ?Map<string, BlockNodeRawConfig>,
+  selectionBefore: ?{...},
+  selectionAfter: ?{...},
+  ...
+};

@@ -134,6 +134,7 @@ class UpdateDraftEditorFlags extends React.Component<{
  */
 class DraftEditor extends React.Component<DraftEditorProps, State> {
   static defaultProps: DraftEditorDefaultProps = {
+    ariaDescribedBy: '{{editor_id_placeholder}}',
     blockRenderMap: DefaultDraftBlockRenderMap,
     blockRendererFn: function() {
       return null;
@@ -314,6 +315,22 @@ class DraftEditor extends React.Component<DraftEditorProps, State> {
     return null;
   }
 
+  /**
+   * returns ariaDescribedBy prop with '{{editor_id_placeholder}}' replaced with
+   * the DOM id of the placeholder (if it exists)
+   * @returns aria-describedby attribute value
+   */
+  _renderARIADescribedBy(): ?string {
+    const describedBy = this.props.ariaDescribedBy || '';
+    const placeholderID = this._showPlaceholder()
+      ? this._placeholderAccessibilityID
+      : '';
+    return (
+      describedBy.replace('{{editor_id_placeholder}}', placeholderID) ||
+      undefined
+    );
+  }
+
   render(): React.Node {
     const {
       blockRenderMap,
@@ -381,9 +398,7 @@ class DraftEditor extends React.Component<DraftEditorProps, State> {
             }
             aria-autocomplete={readOnly ? null : this.props.ariaAutoComplete}
             aria-controls={readOnly ? null : this.props.ariaControls}
-            aria-describedby={
-              this.props.ariaDescribedBy || this._placeholderAccessibilityID
-            }
+            aria-describedby={this._renderARIADescribedBy()}
             aria-expanded={readOnly ? null : ariaExpanded}
             aria-label={this.props.ariaLabel}
             aria-labelledby={this.props.ariaLabelledBy}
@@ -543,7 +558,7 @@ class DraftEditor extends React.Component<DraftEditorProps, State> {
     const editHandler = {...handlerMap.edit};
 
     if (onPaste) {
-      /* $FlowFixMe(>=0.117.0 site=www) This comment suppresses an error found
+      /* $FlowFixMe(>=0.117.0 site=www,mobile) This comment suppresses an error found
        * when Flow v0.117 was deployed. To see the error delete this comment
        * and run Flow. */
       editHandler.onPaste = onPaste;

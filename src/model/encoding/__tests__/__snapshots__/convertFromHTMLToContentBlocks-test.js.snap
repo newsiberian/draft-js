@@ -808,81 +808,81 @@ Array [
   Object {
     "characterList": Array [
       Object {
-        "entity": "1",
+        "entity": "2",
         "style": Array [],
       },
       Object {
-        "entity": "1",
+        "entity": "2",
         "style": Array [
           "BOLD",
         ],
       },
       Object {
-        "entity": "1",
+        "entity": "2",
         "style": Array [
           "BOLD",
         ],
       },
       Object {
-        "entity": "1",
+        "entity": "2",
         "style": Array [
           "BOLD",
         ],
       },
       Object {
-        "entity": "1",
+        "entity": "2",
         "style": Array [
           "BOLD",
         ],
       },
       Object {
-        "entity": "1",
+        "entity": "2",
         "style": Array [
           "BOLD",
         ],
       },
       Object {
-        "entity": "1",
+        "entity": "2",
         "style": Array [
           "BOLD",
         ],
       },
       Object {
-        "entity": "1",
+        "entity": "2",
         "style": Array [],
       },
       Object {
-        "entity": "1",
+        "entity": "2",
         "style": Array [
           "BOLD",
         ],
       },
       Object {
-        "entity": "1",
+        "entity": "2",
         "style": Array [
           "BOLD",
         ],
       },
       Object {
-        "entity": "1",
+        "entity": "2",
         "style": Array [
           "BOLD",
         ],
       },
       Object {
-        "entity": "1",
+        "entity": "2",
         "style": Array [
           "BOLD",
         ],
       },
       Object {
-        "entity": "1",
+        "entity": "2",
         "style": Array [
           "BOLD",
         ],
       },
       Object {
-        "entity": "1",
+        "entity": "2",
         "style": Array [],
       },
     ],
@@ -1134,6 +1134,314 @@ Array [
     "depth": 0,
     "key": "key0",
     "text": "boldnot boldbold again",
+    "type": "unstyled",
+  },
+]
+`;
+
+exports[`Should recognize preformatted blocks 1`] = `
+Array [
+  Object {
+    "characterList": Array [
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+    ],
+    "data": Object {},
+    "depth": 0,
+    "key": "key0",
+    "text": "following some pre some_code_stuff",
+    "type": "unstyled",
+  },
+]
+`;
+
+exports[`Should recognize preformatted blocks mixed other styles 1`] = `
+Array [
+  Object {
+    "characterList": Array [
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "BOLD",
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "BOLD",
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "BOLD",
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "BOLD",
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+      Object {
+        "entity": null,
+        "style": Array [
+          "CODE",
+        ],
+      },
+    ],
+    "data": Object {},
+    "depth": 0,
+    "key": "key0",
+    "text": "example bold and code",
     "type": "unstyled",
   },
 ]
