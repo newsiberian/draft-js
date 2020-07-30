@@ -35,6 +35,7 @@
 /* @noflip */
 .public/DraftStyleDefault/listRTL {
   direction: rtl;
+  text-align: right;
 }
 
 /**
