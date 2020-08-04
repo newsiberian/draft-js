@@ -161,13 +161,27 @@ const isValidAnchor = (node: Node) => {
     return false;
   }
   const anchorNode: HTMLAnchorElement = (node: any);
-  return !!(
-    anchorNode.href &&
-    (anchorNode.protocol === 'http:' ||
-      anchorNode.protocol === 'https:' ||
-      anchorNode.protocol === 'mailto:' ||
-      anchorNode.protocol === 'tel:')
-  );
+
+  if (
+    !anchorNode.href ||
+    (anchorNode.protocol !== 'http:' &&
+      anchorNode.protocol !== 'https:' &&
+      anchorNode.protocol !== 'mailto:' &&
+      anchorNode.protocol !== 'tel:')
+  ) {
+    return false;
+  }
+
+  try {
+    // Just checking whether we can actually create a URI
+    const _ = new URI(anchorNode.href);
+    return true;
+    // We need our catch statements to have arguments, else
+    // UglifyJS (which we use for our OSS builds) will crash.
+    // eslint-disable-next-line fb-www/no-unused-catch-bindings
+  } catch (_) {
+    return false;
+  }
 };
 
 /**
